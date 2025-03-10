@@ -20,11 +20,8 @@ class VenueForm(FlaskForm):
     name = StringField(
         'name', validators=[DataRequired()]
     )
-    city = StringField(
-        'city', validators=[DataRequired()]
-    )
-    state = SelectField(
-        'state', validators=[DataRequired()],
+    city = SelectField(
+        'city', validators=[DataRequired()],
         choices=[
             ('AL', 'AL'),
             ('AK', 'AK'),
@@ -78,6 +75,10 @@ class VenueForm(FlaskForm):
             ('WI', 'WI'),
             ('WY', 'WY'),
         ]
+    )
+    state = StringField(
+        'state', validators=[DataRequired()],
+        
     )
     address = StringField(
         'address', validators=[DataRequired()]
@@ -127,11 +128,8 @@ class ArtistForm(FlaskForm):
     name = StringField(
         'name', validators=[DataRequired()]
     )
-    city = StringField(
-        'city', validators=[DataRequired()]
-    )
-    state = SelectField(
-        'state', validators=[DataRequired()],
+    city = SelectField(
+        'city', validators=[DataRequired()],
         choices=[
             ('AL', 'AL'),
             ('AK', 'AK'),
@@ -185,6 +183,9 @@ class ArtistForm(FlaskForm):
             ('WI', 'WI'),
             ('WY', 'WY'),
         ]
+    )
+    state = StringField(
+        'state', validators=[DataRequired()],
     )
     phone = StringField(
         'phone'
